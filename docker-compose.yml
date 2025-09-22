@@ -1,0 +1,14 @@
+services:
+  public:
+    build:
+      context: .
+      dockerfile: Dockerfile.public
+    ports:
+      - "8001:8000"
+
+  private:
+    build:
+      context: .
+      dockerfile: Dockerfile.private
+    ports:
+      - "8002:8000"
