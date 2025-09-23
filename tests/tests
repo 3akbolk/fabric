@@ -1,0 +1,11 @@
+import subprocess
+import sys
+from pathlib import Path
+
+def test_extract_wisdom_runs():
+    repo = Path(__file__).resolve().parents[1]
+    script = repo / 'patterns' / 'extract_wisdom' / 'extract_wisdom.py'
+    input_file = repo / 'data' / 'input.txt'
+    proc = subprocess.run([sys.executable, str(script), str(input_file)], capture_output=True, text=True)
+    assert 'should write clear code' in proc.stdout
+    assert 'Always add tests for new behavior' in proc.stdout

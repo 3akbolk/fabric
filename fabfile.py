@@ -1,9 +1,14 @@
 from fabric import task
+import os
 
 @task
 def hello(c):
+    """Sanity check to make sure Fabric is working"""
     print("Hello, Fabric project is working!")
 
+# -------------------------------
+# File helpers
+# -------------------------------
 @task
 def list_data(c):
     """Lists files in the data folder"""
@@ -22,20 +27,18 @@ def clean_data(c):
     c.run("rm -f data/*", warn=True)
     print("Cleaned data folder")
 
+# -------------------------------
+# Pattern helpers
+# -------------------------------
 @task
-def build_container(c, service="fabric-project"):
-    """Builds the Docker container"""
-    c.run(f"docker build -t {service} .")
-    print(f"{service} container built!")
-
-@task
-def run_container(c, service="fabric-project", port="8000:8000"):
-    """Runs the Docker container"""
-    c.run(f"docker run -p {port} {service}")
-    print(f"{service} container running on port {port}")
-
-@task
-def stop_container(c, service="fabric-project"):
-    """Stops all running containers with the given name"""
-    c.run(f"docker ps -q --filter name={service} | xargs -r docker stop")
-    print(f"Stopped all {service} containers")
+def extract_wisdom(c, input_file="data/input.txt"):
+    """
+    Runs the extract_wisdom pattern on a text file.
+    Example: fab extract-wisdom --input-file=data/mydraft.txt
+    """
+    script_path = "patterns/extract_wisdom/extract_wisdom.py"
+    if os.path.exists(script_path):
+        c.run(f"python3 {script_path} {input_file}")
+        print(f"Ran extract_wisdom on {input_file}")
+    else:
+        print("extract_wisdom pattern not found!")
