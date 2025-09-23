@@ -42,15 +42,29 @@ def clean_data(c):
 # -------------------------------
 # Pattern helpers
 # -------------------------------
+   
 @task
-def extract_wisdom(c, input_file="data/input.txt"):
+def extract_wisdom(c, source="data/input.txt"):
     """
-    Runs the extract_wisdom pattern on a text file.
-    Example: fab extract-wisdom --input-file=data/mydraft.txt
+    Extracts wisdom from a local file or a web URL.
+    Cleans HTML if source is a URL.
     """
-    script_path = "my_patterns/extract_wisdom/extract_wisdom.py"
-    if os.path.exists(script_path):
-        c.run(f"python3 {script_path} {input_file}")
-        print(f"Ran extract_wisdom on {input_file}")
+    import os
+    import requests
+    from bs4 import BeautifulSoup
+
+    if source.startswith("http"):
+        r = requests.get(source)
+        html = r.text
+        soup = BeautifulSoup(html, "html.parser")
+        text = soup.get_text(separator="\n")  # Extract readable text
+        print("Extracted wisdom from URL:")
+        print(text[:500])  # Show first 500 chars
     else:
-        print("extract_wisdom pattern not found!")
+        if os.path.exists(source):
+            with open(source) as f:
+                text = f.read()
+            print("Extracted wisdom from file:")
+            print(text[:500])
+        else:
+            print("Source not found:", source)
