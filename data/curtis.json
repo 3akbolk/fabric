@@ -1,0 +1,42 @@
+{
+  "title": "curtis.txt",
+  "source_type": "document",
+  "facts": [
+    {
+      "description": "The United States is facing a financial restructuring akin to bankruptcy.",
+      "context": "Chronic national deficit and excessive borrowing are leading to a need for significant financial reform."
+    },
+    {
+      "description": "The Federal Reserve is part of the government and cannot run out of dollars.",
+      "context": "Unlike a private company, the US government\u2019s liabilities are denominated in its own currency."
+    },
+    {
+      "description": "A national bankruptcy would not stop the functioning of the economy.",
+      "context": "Even in bankruptcy, financial operations like ATMs would continue, and personal net worth would initially remain unchanged."
+    },
+    {
+      "description": "New sovereign accounting principles propose that the government owns the country.",
+      "context": "The state is viewed as a firm whose mission is to cultivate the nation."
+    }
+  ],
+  "habits": [
+    {
+      "description": "The US has a pattern of excessive borrowing across both public and private sectors.",
+      "context": "This borrowing funds consumption rather than genuine investment, leading to a decline in productive industry."
+    },
+    {
+      "description": "The current financial system is characterized as 'American boomer finance'.",
+      "context": "This system requires understanding and restructuring to address its inefficiencies."
+    }
+  ],
+  "references": [
+    {
+      "title": "curtis.txt",
+      "type": "document",
+      "link": null
+    }
+  ],
+  "metadata": {
+    "extracted_date": "2025-09-24"
+  }
+}

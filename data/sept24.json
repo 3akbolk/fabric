@@ -1,0 +1,55 @@
+{
+  "title": "sept24.txt",
+  "source_type": "document",
+  "facts": [
+    {
+      "description": "Tasks in Fabric are defined in fabfile.py and executed using the fab command.",
+      "context": "Fabric Basics"
+    },
+    {
+      "description": "Virtual environments isolate dependencies for Python projects.",
+      "context": "Virtual Environment Management"
+    },
+    {
+      "description": "API keys should be stored in environment variables, not hard-coded.",
+      "context": "Environment Variables"
+    },
+    {
+      "description": "The investigate_document task prepares a JSON skeleton and extracts structured data.",
+      "context": "Investigate Document Task"
+    }
+  ],
+  "habits": [
+    {
+      "description": "Always activate the virtual environment before running tasks.",
+      "context": "Virtual Environment Management"
+    },
+    {
+      "description": "Use try/except blocks for JSON parsing to handle errors safely.",
+      "context": "AI Integration Notes"
+    },
+    {
+      "description": "Print a preview of AI output if JSON parsing fails for debugging.",
+      "context": "Debugging Tips"
+    },
+    {
+      "description": "Keep consistent formatting in prompts for reliable AI output.",
+      "context": "Debugging Tips"
+    }
+  ],
+  "references": [
+    {
+      "title": "sept24.txt",
+      "type": "document",
+      "link": null
+    },
+    {
+      "title": "OpenAI API Documentation",
+      "type": "API Reference",
+      "link": "https://platform.openai.com/docs/api-reference"
+    }
+  ],
+  "metadata": {
+    "extracted_date": "2025-09-24"
+  }
+}

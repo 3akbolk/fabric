@@ -1,0 +1,52 @@
+{
+  "title": "poop.txt",
+  "source_type": "document",
+  "facts": [
+    {
+      "description": "U.S. District Judge Steven Merryday dismissed Trump's $15 billion defamation lawsuit against the New York Times.",
+      "context": "The judge criticized the lawsuit as 'decidedly improper and impermissible' and set a limit on any amended complaint."
+    },
+    {
+      "description": "Polls indicate a significant drop in Trump's approval rating and growing pessimism among Republicans about the country's direction.",
+      "context": "The share of American adults who believe the country is off track increased from 62% to 75% since June."
+    },
+    {
+      "description": "Democratic lawmakers are increasingly opposing Trump's actions, with Illinois Governor J.B. Pritzker stating that Trump's rhetoric is 'un-American.'",
+      "context": "Pritzker argues that Trump is destabilizing the country to erode democratic institutions."
+    },
+    {
+      "description": "Since January, over 400 lawsuits have been filed against the Trump administration, with courts halting policies in more than 100 cases.",
+      "context": "Litigation has been a successful avenue for challenging Trump's policies."
+    }
+  ],
+  "habits": [
+    {
+      "description": "Democratic lawmakers are conducting oversight and demanding accountability for the Trump administration's actions.",
+      "context": "This includes introducing reforms and a constitutional amendment to address campaign finance issues."
+    },
+    {
+      "description": "Representative Jason Crow emphasizes the importance of everyday citizens standing up for democracy.",
+      "context": "He highlights the courage of individuals who have defended democratic values in various situations."
+    }
+  ],
+  "references": [
+    {
+      "title": "poop.txt",
+      "type": "document",
+      "link": null
+    },
+    {
+      "title": "Judge dismisses Trump's lawsuit against New York Times",
+      "type": "news article",
+      "link": "https://www.usatoday.com/story/news/politics/2025/09/19/judge-trump-lawsuit-new-york-times/86241281007/"
+    },
+    {
+      "title": "Court listener for Trump v. New York Times",
+      "type": "court document",
+      "link": "https://www.courtlistener.com/docket/71354540/5/trump-v-new-york-times-company/"
+    }
+  ],
+  "metadata": {
+    "extracted_date": "2025-09-24"
+  }
+}

@@ -1,0 +1,13 @@
+ai:
+  # Which provider do you want to use? (pick ONE)
+  provider: openai
+  model: gpt-4o-mini
+  api_key: ${OPENAI_API_KEY}
+
+  # --- Examples of switching providers ---
+  # provider: anthropic
+  # model: claude-3-5-sonnet
+  # api_key: ${ANTHROPIC_API_KEY}
+
+  # provider: ollama
+  # model: llama3

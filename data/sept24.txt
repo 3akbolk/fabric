@@ -1,0 +1,92 @@
+Daily Learning Journal – 2025-09-24
+Topics Covered
+
+Fabric Python tasks
+
+Virtual environments and dependency management
+
+OpenAI API integration for structured document analysis
+
+JSON parsing and error handling
+
+Environment variable management for API keys
+
+Key Takeaways
+
+Fabric Basics
+
+Tasks live in fabfile.py and run with fab <task>
+
+Each task gets a context c for shell commands
+
+All imports and helpers should remain at the top of the file
+
+Virtual Environment Management
+
+.venv isolates dependencies
+
+Activate before running tasks: source .venv/bin/activate
+
+Install packages like openai inside .venv
+
+Environment Variables
+
+API keys should never be hard-coded
+
+Use export OPENAI_API_KEY="sk-xxxx" in .bashrc or .zshrc
+
+Verify with os.getenv("OPENAI_API_KEY")
+
+Investigate Document Task
+
+Reads document and prepares a JSON skeleton
+
+Uses AI (query_ai) to extract facts, habits, and references
+
+Saves structured JSON for future queries
+
+AI Integration Notes
+
+OpenAI v1.0+ uses OpenAI() and client.chat.completions.create()
+
+Always instruct AI to return valid JSON to simplify parsing
+
+Wrap JSON parsing in try/except to handle errors safely
+
+Debugging Tips
+
+Print a preview of AI output if JSON parsing fails
+
+Test with small documents first
+
+Keep consistent formatting in prompts for reliable AI output
+
+Completed Tasks
+
+Installed openai package in .venv
+
+Created investigate_document task in fabfile.py
+
+Configured AI integration and environment variable for API key
+
+Ran initial tests and ensured JSON skeleton is saved
+
+Next Steps
+
+Test the investigate_document task on multiple documents
+
+Refine AI prompt for better accuracy
+
+Build a query task for interactive questions on investigated documents
+
+Optional: Add robust JSON parsing (e.g., json5) for error tolerance
+
+Personal Notes / Reflections
+
+Today I learned how to combine Fabric tasks with AI calls to process documents.
+
+Keeping API keys in environment variables is safer and cleaner than in code.
+
+Forcing AI to return JSON and using a skeleton ensures the workflow never completely breaks.
+
+This process will form the foundation of a memory reservoir for structured insights from documents.

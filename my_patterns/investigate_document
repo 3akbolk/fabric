@@ -1,0 +1,31 @@
+from fabric import task
+import json
+
+@task
+def investigate_document(c, file_path):
+    """
+    Investigate a single document and produce JSON for deep queries.
+    """
+    # 1. Load document
+    with open(file_path, "r") as f:
+        content = f.read()
+
+    # 2. Call AI to extract insights (pseudo-code)
+    ai_response = c.run(f"fabric_ai_extract '{content}'", hide=True)
+    
+    # 3. Convert AI response to structured JSON
+    doc_json = {
+        "title": "Document Title",
+        "facts": ai_response.get("facts", []),
+        "events": ai_response.get("events", []),
+        "people": ai_response.get("people", []),
+        "references": [{"title": file_path, "type": "document", "link": None}],
+        "metadata": {"extracted_date": "2025-09-24"}
+    }
+
+    # 4. Save JSON
+    json_file = file_path.replace(".txt", ".json")
+    with open(json_file, "w") as f:
+        json.dump(doc_json, f, indent=2)
+
+    print(f"Document investigation completed. JSON saved to {json_file}")
