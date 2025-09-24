@@ -1,0 +1,299 @@
+Master Learning Journal – September 20–24, 2025
+2025-09-20
+
+Project / Focus: Python project setup, Fabric basics, AI workflow prep
+
+Topics Covered
+
+Python project structure and organization
+
+Introduction to Fabric for task automation
+
+Virtual environments and dependency handling
+
+Basic AI integration and API use
+
+File handling and JSON structure basics
+
+Key Takeaways
+
+Python Project Setup: Organize directories (data/, fabfile.py, .venv/) and separate input/output files
+
+Fabric Basics: Tasks live in fabfile.py, decorated with @task, run via fab <task>
+
+Virtual Environments: .venv isolates dependencies, activate with source .venv/bin/activate, install packages locally
+
+AI Integration: Use environment variables for API keys, plan prompts for structured JSON output
+
+Document Handling & JSON: Use skeleton JSON to ensure consistent output and parse easily
+
+Completed Tasks
+
+Set up basic Python project structure
+
+Created initial Fabric task skeletons
+
+Installed .venv and tested package installation
+
+Planned JSON structures for document investigation
+
+Next Steps
+
+Build query_ai helper function
+
+Create extract_wisdom Fabric task
+
+Test AI output formatting
+
+Design investigate_document workflow
+
+Refine prompt templates for JSON output
+
+Personal Notes / Reflections
+
+Project organization and virtual environments are essential
+
+Structured JSON output is key for automated workflows
+
+2025-09-21
+
+Project / Focus: Fabric tasks, AI integration, Docker basics
+
+Topics Covered
+
+Git, GitHub, and Fabric project management
+
+Python scripting for automation
+
+Virtual environments and dependency handling
+
+AI integration concepts for tasks
+
+Docker and AI-enabled containers
+
+Fabric commands and task structure
+
+Key Takeaways
+
+Git & GitHub: Fork vs clone, keep dependencies and files organized
+
+Fabric Basics: Tasks defined with @task, pass arguments via --source=
+
+Virtual Environments: Activate .venv, install packages inside
+
+AI Integration: API keys in environment variables, design prompts for structured output
+
+Docker Basics: Containers package code + dependencies, allow consistent AI environments
+
+Fabric Commands: Imports at top of fabfile.py, test tasks on small files first
+
+Completed Tasks
+
+Reviewed Fabric project structure
+
+Tested basic Fabric tasks in .venv
+
+Installed AI dependencies
+
+Discussed Docker workflow for Fabric tasks
+
+Next Steps
+
+Set up environment variables for AI keys
+
+Create query_ai helper function
+
+Build initial JSON skeletons
+
+Begin creating Fabric tasks for document extraction
+
+Personal Notes / Reflections
+
+Combining Fabric, Python, and AI integration lays groundwork for knowledge reservoir
+
+Docker ensures consistent environments
+
+2025-09-22
+
+Project / Focus: API publishing concepts, tech stack planning, Fabric workflow
+
+Topics Covered
+
+Fabric project tasks and configuration
+
+Personal APIs vs MCP servers
+
+Tech stack for API publishing
+
+JSON-RPC, REST, GraphQL concepts
+
+CI/CD and deployment examples
+
+Key Takeaways
+
+Fabric Overview: Automate tasks, use @task, pass arguments
+
+Personal API & MCP Server:
+
+Personal API = your own custom endpoint
+
+MCP server = central service coordinating multiple clients
+
+Tech Stack: Python + Fabric + FastAPI/Flask + optional DB + AI models
+
+API Formats: JSON-RPC (remote calls), REST (HTTP endpoints), GraphQL (flexible queries)
+
+CI/CD & Deployment: Automate testing/deployment via GitHub Actions, Docker pipelines
+
+Development Workflow: Fork vs use, organize tasks/configs for maintainability
+
+Completed Tasks
+
+Reviewed API frameworks
+
+Discussed differences between personal API and MCP server
+
+Explored API formats
+
+Started planning tech stack for deployment
+
+Next Steps
+
+Decide concrete tech stack
+
+Set up fabric.yaml configuration
+
+Set environment variables and .venv
+
+Explore deployment pipelines (Docker + FastAPI)
+
+Plan task structures for document analysis
+
+Personal Notes / Reflections
+
+Understanding personal API vs MCP server clarifies design decisions
+
+CI/CD knowledge is important for production-ready AI tasks
+
+2025-09-23
+
+Project / Focus: Fabric tasks for AI, extract wisdom workflow, JSON structure
+
+Topics Covered
+
+Fabric task creation and argument handling
+
+Virtual environment management
+
+AI model integration in Fabric tasks
+
+JSON skeleton creation for document analysis
+
+Prompt design for structured output
+
+Key Takeaways
+
+Fabric Tasks: @task decorator, tasks called via fab <task>
+
+Virtual Environments: .venv isolates dependencies, install packages locally
+
+AI Model Integration: Configure AI model in helper function (query_ai)
+
+Prompt Design: Enforce JSON-only output for parsing
+
+JSON Handling: Use skeleton JSON, wrap json.loads() in try/except
+
+Completed Tasks
+
+Configured Fabric task to read source document
+
+Built initial JSON skeleton
+
+Tested AI prompt for extract_wisdom
+
+Environment variable setup for API key
+
+Next Steps
+
+Migrate OpenAI API calls to v1.0+
+
+Refine AI prompts for consistent JSON
+
+Implement fallback parsing
+
+Expand task to handle multiple documents
+
+Personal Notes / Reflections
+
+Structured prompts yield predictable AI output
+
+JSON skeleton ensures workflow stability
+
+Fabric tasks automate document investigation efficiently
+
+2025-09-24
+
+Project / Focus: Investigate document task, AI JSON output, debugging
+
+Topics Covered
+
+Fabric task for investigate_document
+
+Command argument handling with --source=
+
+AI integration with OpenAI v1 API
+
+JSON parsing and error handling
+
+Environment variable usage for API keys
+
+Key Takeaways
+
+Investigate Document Task: Similar to extract wisdom but focuses on detailed document analysis
+
+Command Arguments: Use --source=path for consistency
+
+AI Integration: Use latest OpenAI API (v1), call via helper function
+
+JSON Handling: Parse AI output, save to .json file, include fallback for errors
+
+Environment Variables: Store API key in .bashrc / .zshrc, access via os.getenv()
+
+Completed Tasks
+
+Created investigate_document task in fabfile.py
+
+Tested command with sample file
+
+Handled AI parsing errors and JSON saving
+
+Verified environment variable setup
+
+Next Steps
+
+Refine AI prompts for accuracy
+
+Expand task to multiple documents
+
+Integrate with query task for interactive searching
+
+Personal Notes / Reflections
+
+Task works reliably with JSON skeleton
+
+Environment variable setup prevents accidental key leaks
+
+Daily practice improves debugging and workflow design
+
+✅ Master Journal Summary:
+From September 20–24, you learned:
+
+How to set up Fabric tasks, virtual environments, and project structure
+
+How to integrate AI into Python/Fabric workflows
+
+JSON handling, prompt design, and document parsing techniques
+
+Deployment, API, and CI/CD concepts for production-ready tasks
+
+Daily reflection helps track progress and plan next steps

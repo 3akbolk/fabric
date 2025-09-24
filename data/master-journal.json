@@ -1,0 +1,58 @@
+{
+  "title": "master-journal.txt",
+  "source_type": "document",
+  "facts": [
+    {
+      "description": "Python project structure includes directories for data, a fabfile, and a virtual environment.",
+      "context": "Key Takeaways from September 20, 2025."
+    },
+    {
+      "description": "Fabric tasks are defined with the @task decorator and can be run using the fab command.",
+      "context": "Key Takeaways from September 20, 2025."
+    },
+    {
+      "description": "AI integration requires using environment variables for API keys and planning prompts for structured JSON output.",
+      "context": "Key Takeaways from September 20, 2025."
+    },
+    {
+      "description": "Docker containers package code and dependencies, ensuring consistent AI environments.",
+      "context": "Key Takeaways from September 21, 2025."
+    },
+    {
+      "description": "Personal APIs are custom endpoints, while MCP servers coordinate multiple clients.",
+      "context": "Key Takeaways from September 22, 2025."
+    },
+    {
+      "description": "CI/CD automates testing and deployment using tools like GitHub Actions and Docker pipelines.",
+      "context": "Key Takeaways from September 22, 2025."
+    },
+    {
+      "description": "Structured prompts yield predictable AI output, and JSON skeletons ensure workflow stability.",
+      "context": "Personal Notes from September 23, 2025."
+    },
+    {
+      "description": "Environment variables should be stored in .bashrc or .zshrc to prevent accidental key leaks.",
+      "context": "Key Takeaways from September 24, 2025."
+    }
+  ],
+  "habits": [
+    {
+      "description": "Daily reflections help track progress and plan next steps.",
+      "context": "Master Journal Summary."
+    },
+    {
+      "description": "Regular practice improves debugging and workflow design.",
+      "context": "Personal Notes from September 24, 2025."
+    }
+  ],
+  "references": [
+    {
+      "title": "master-journal.txt",
+      "type": "document",
+      "link": null
+    }
+  ],
+  "metadata": {
+    "extracted_date": "2025-09-24"
+  }
+}
