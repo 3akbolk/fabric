@@ -93,23 +93,32 @@ def extract_wisdom(c, source="data/input.txt"):
     data_json["metadata"]["source_file"] = source
     data_json["metadata"]["length"] = len(text)
 
-    # AI prompt
-    ai_prompt = f"""
-Extract key insights from the following content.
-Return only valid JSON in this format:
+    # read source content
+    with open(source, "r", encoding="utf-8") as f:
+        content = f.read()
 
-{json.dumps(EXTRACT_WISDOM_SKELETON, indent=2)}
+    # Load the system prompt from system.md
+    with open("my_patterns/extract_wisdom/system.md", "r", encoding="utf-8") as f:
+        system_prompt = f.read()
 
-Content:
-{text}
-"""
+    # Build AI prompt
+    ai_prompt = f"{system_prompt}\n\nDocument:\n{text}"
+
 
     # Query AI
     ai_output = query_ai(ai_prompt)
 
+    # Clean AI output
+    import re
+    def clean_ai_output(output):
+        return re.sub(r"^```(?:json)?|```$", "", output.strip(), flags=re.MULTILINE)
+
+    cleaned_output = clean_ai_output(ai_output)
+
+
     # Parse AI output
     try:
-        ai_data = json.loads(ai_output)
+        ai_data = json.loads(cleaned_output)
         data_json.update(ai_data)
         print("AI extraction successful.")
     except json.JSONDecodeError:
@@ -138,6 +147,7 @@ def investigate_document(c, source):
         print(f"Error: File {source} does not exist.")
         return
 
+    # read source content
     with open(source, "r", encoding="utf-8") as f:
         content = f.read()
 
@@ -150,26 +160,28 @@ def investigate_document(c, source):
 
     print("Initial JSON structure prepared.")
 
-    # AI prompt
-    ai_prompt = f"""
-Extract key insights from the following document.
-Return only valid JSON in this format:
 
-{json.dumps(INVESTIGATE_DOCUMENT_SKELETON, indent=2)}
+    # Load the system prompt from system.md
+    with open("my_patterns/investigate_document/system.md", "r", encoding="utf-8") as f:
+        system_prompt = f.read()
 
-Document:
-{content}
-"""
+    # Build AI prompt
+    ai_prompt = f"{system_prompt}\n\nDocument:\n{content}"
 
     # Query AI
     ai_output = query_ai(ai_prompt)
 
+    # Clean AI output
+    import re
+    def clean_ai_output(output):
+        return re.sub(r"^```(?:json)?|```$", "", output.strip(), flags=re.MULTILINE)
+
+    cleaned_output = clean_ai_output(ai_output)
+
     # Parse AI output
     try:
-        ai_data = json.loads(ai_output)
-        doc_json["facts"] = ai_data.get("facts", [])
-        doc_json["habits"] = ai_data.get("habits", [])
-        doc_json["references"].extend(ai_data.get("references", []))
+        ai_data = json.loads(cleaned_output)
+        doc_json.update(ai_data)
         print("AI extraction successful.")
     except json.JSONDecodeError:
         print("Error parsing AI output. Saving skeleton only.")

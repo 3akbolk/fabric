@@ -1,0 +1,34 @@
+{
+  "title": "tylenol.txt",
+  "sections": {},
+  "entities": [],
+  "events": [],
+  "quotes": [],
+  "themes": [],
+  "connections": [],
+  "references": [
+    "The Gospel of John, which discusses the nature of sin and suffering.",
+    "A piece from the Washington Post about the Beckham family, illustrating the struggle of a father dealing with grief and political beliefs."
+  ],
+  "metadata": {
+    "source_file": "data/tylenol.txt",
+    "length": 11952,
+    "processed_date": "2025-09-24"
+  },
+  "ai_notes": {
+    "confidence": 0.0,
+    "questions_generated": [],
+    "possible_inconsistencies": []
+  },
+  "facts": [
+    "President Trump claimed that childhood vaccines should be spaced out further than the current vaccine schedule.",
+    "Trump stated that autism is caused by pregnant women taking Tylenol.",
+    "FDA Commissioner Marty Makary described autism as an 'epidemic' and suggested it may be 'entirely preventable.'",
+    "Robert F. Kennedy Jr. claimed that 1 in 31 American children born in 2014 are disabled by autism, a significant increase from previous years."
+  ],
+  "habits": [
+    "The MAGA/MAHA alliance exhibits a pattern of blaming mothers for autism, suggesting they are 'weak' for using medications like Tylenol during pregnancy.",
+    "There is a tendency among certain political figures to label neurodivergent individuals as 'defective' and to advocate for their 'cure' rather than acceptance.",
+    "The document highlights a recurring theme of discomfort with neurodivergent individuals, leading to exclusionary practices, such as the closure of spaces where they might feel comfortable."
+  ]
+}

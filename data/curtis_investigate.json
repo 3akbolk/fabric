@@ -1,0 +1,35 @@
+{
+  "title": "curtis.txt",
+  "sections": {},
+  "entities": [],
+  "events": [],
+  "quotes": [],
+  "themes": [],
+  "connections": [],
+  "references": [
+    "The document discusses the need for structural change in economic praxis and theory, comparing it to the fall of Marxist-Leninist central planning.",
+    "It mentions the importance of formalizing securities to stabilize markets and eliminate informal securities."
+  ],
+  "metadata": {
+    "source_file": "data/curtis.txt",
+    "length": 6302,
+    "processed_date": "2025-09-24"
+  },
+  "ai_notes": {
+    "confidence": 0.0,
+    "questions_generated": [],
+    "possible_inconsistencies": []
+  },
+  "facts": [
+    "The United States is facing a chronic national deficit and excessive borrowing across both public and private sectors.",
+    "The concept of 'restructuring' in a financial sense is equated to national bankruptcy.",
+    "The Federal Reserve System is part of the government and cannot run out of dollars.",
+    "A proper bankruptcy is described as a restructuring of accounting systems rather than a cessation of operations.",
+    "New sovereign accounting principles state that the government owns the country, fiat currency is government equity, and markets are stable when there are no informal securities."
+  ],
+  "habits": [
+    "The US has been borrowing excessively for at least fifty years, funding consumption rather than genuine investment.",
+    "There is a lack of clarity between public and private financial responsibilities.",
+    "The existing financial system is referred to as 'American boomer finance,' which requires understanding before winding it down."
+  ]
+}

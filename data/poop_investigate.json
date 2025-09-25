@@ -1,0 +1,31 @@
+{
+  "title": "poop.txt",
+  "sections": {},
+  "entities": [],
+  "events": [],
+  "quotes": [],
+  "themes": [],
+  "connections": [],
+  "references": [
+    {
+      "title": "USA Today Article on Trump's Lawsuit",
+      "url": "https://www.usatoday.com/story/news/politics/2025/09/19/judge-trump-lawsuit-new-york-times/86241281007/"
+    },
+    {
+      "title": "Court Listener Docket for Trump v. New York Times",
+      "url": "https://www.courtlistener.com/docket/71354540/5/trump-v-new-york-times-company/"
+    }
+  ],
+  "metadata": {
+    "source_file": "data/poop.txt",
+    "length": 16081,
+    "processed_date": "2025-09-24"
+  },
+  "ai_notes": {
+    "confidence": 0.0,
+    "questions_generated": [],
+    "possible_inconsistencies": []
+  },
+  "facts": [],
+  "habits": []
+}
